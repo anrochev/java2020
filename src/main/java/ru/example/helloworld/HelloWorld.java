@@ -1,5 +1,9 @@
 package ru.example.helloworld;
 
+import ru.example.animal.Animal;
+import ru.example.animal.Cat;
+import ru.example.animal.Dog;
+
 public class HelloWorld {
     public static byte sumShortByte(byte b, short s) {
         return (byte)(b + s);
@@ -42,8 +46,28 @@ public class HelloWorld {
         byte resByte;
         char a='A', bb='B';
         boolean bool;
-        //System.out.println("Hello, World!");
+/*Задание 6. Необходимо построить модель поведения кошек и собак (Написать соответствующие классы).
+Модель должна отражать возможности этих животных издавать звуки, двигаться кушать, лазать по деревьям и плавать (поля + методы).
+Модель должна учитывать возможность расширения под новое животное по таким же критериям.*/
+        System.out.println("Задание 6");
+        Cat cat = new Cat();
+        Animal cat2 = new Cat();
+        Dog Sharik = new Dog(2,"brown",true, "Шарик");
+        cat.setName("Машка");
+        System.out.println(Sharik.toString());
+        System.out.println(cat.toString());
+        cat.makeSounds();
+        cat2.makeSounds();
+        cat.climbsTrees();
+        Sharik.makeSounds();
+        Sharik.eat();
+        Sharik.move();
+        Sharik.swim();
 
+
+
+
+        System.out.println("\nЗадание 5 (работа с типами данных)");
            /* 4. Написать публичный метод принимающий 2 параметра: первый типа byte и второй типа short.
         Метод должен возвращать сумму значений параметров. Тип возвращаемого значения должен быть byte.*/
         resByte = sumShortByte(b,s);
@@ -86,4 +110,5 @@ public class HelloWorld {
         /*12. Написать метод принимающий 1 параметр типа int и возвращающий его представление в виде печатного символа*/
         System.out.println("Возврат числа 745 = "+getIntStr(745));
     }
+
 }
